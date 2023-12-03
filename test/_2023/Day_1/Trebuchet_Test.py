@@ -68,6 +68,10 @@ class Trebuchet_Test(unittest.TestCase):
     def test_line_contains_no_digits_with_string_digits(self):
         pass
 
+    @unittest.skip
+    def test_line_contains_overlapping_string_digits(self):
+        pass
+
     # Challenge
 
     def test_part_2(self):

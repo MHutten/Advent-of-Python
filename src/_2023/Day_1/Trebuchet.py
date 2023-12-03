@@ -202,9 +202,6 @@ class String_Digits(Enum):
     SEVEN   = Seven
     EIGHT   = Eight
     NINE    = Nine
-
-    def __call__(self):
-        return self.value()
     
     def compare_initial_character(self, char: str):
         return self.value.compare_initial_character(char)
