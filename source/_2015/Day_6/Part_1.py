@@ -8,7 +8,6 @@ from Probably_a_Fire_Hazard import Lights, parse_operation_string
 def main() -> None:
 
     lights = Lights(False)
-    number_of_lit_lights = 0
 
     for string in read_lines(sys.argv[1]):
 
@@ -16,18 +15,18 @@ def main() -> None:
 
         if operation == "on":
 
-            number_of_lit_lights += lights.turn_on(start, end)
+            lights.turn_on(start, end)
 
         elif operation == "toggle":
 
-            number_of_lit_lights += lights.toggle(start, end)
+            lights.toggle(start, end)
 
         else:
 
-            number_of_lit_lights -= lights.turn_off(start, end)
+            lights.turn_off(start, end)
 
 
-    print(number_of_lit_lights)
+    print(lights.get_number_of_lit_lights())
 
 if __name__ == "__main__":
     main()

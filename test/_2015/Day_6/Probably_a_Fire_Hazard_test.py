@@ -12,7 +12,9 @@ class ProbablyaFireHazardTestCase(TestCase):
         
         lights = Lights(False)
 
-        self.assertEqual(lights.turn_on((0, 0), (999, 999)), 1000000)
+        lights.turn_on((0, 0), (999, 999))
+
+        self.assertEqual(lights.get_number_of_lit_lights(), 1000000)
 
         for i in range(1000):
 
@@ -32,18 +34,20 @@ class ProbablyaFireHazardTestCase(TestCase):
 
                 lights[index][0] = True
 
-        
-        self.assertEqual(lights.toggle((0, 0), (999, 0)), 0)
+
+        lights.toggle((0, 0), (999, 0))
+
+        self.assertEqual(lights.get_number_of_lit_lights(), 500)
 
         for i in range(1000):
 
-            if index % 2 == 0:
+            if i % 2 == 0:
 
-                self.assertFalse(lights[index][0])
+                self.assertFalse(lights[i][0], i)
 
             else:
 
-                self.assertTrue(lights[index][0])
+                self.assertTrue(lights[i][0])
 
             for j in range(1, 1000):
 
@@ -55,7 +59,9 @@ class ProbablyaFireHazardTestCase(TestCase):
 
         lights = Lights(True)
 
-        self.assertEqual(lights.turn_off((499, 499), (500, 500)), 4)
+        lights.turn_off((499, 499), (500, 500))
+
+        self.assertEqual(lights.get_number_of_lit_lights(), 999996)
 
         for i in range(1000):
 
@@ -76,7 +82,9 @@ class ProbablyaFireHazardTestCase(TestCase):
 
         lights = LightsWithBrightnessControls(0)
 
-        self.assertEqual(lights.turn_on_ancient_nordic_elvish((0, 0), (0, 0)), 1)
+        lights.turn_on_ancient_nordic_elvish((0, 0), (0, 0))
+
+        self.assertEqual(lights.calculate_total_brightness(), 1)
 
         self.assertEqual(lights[0][0], 1)
 
@@ -92,7 +100,9 @@ class ProbablyaFireHazardTestCase(TestCase):
 
         lights = LightsWithBrightnessControls(0)
 
-        self.assertEqual(lights.toggle_ancient_nordig_elvish((0, 0), (999, 999)), 2000000)
+        lights.toggle_ancient_nordig_elvish((0, 0), (999, 999))
+
+        self.assertEqual(lights.calculate_total_brightness(), 2000000)
 
         for i in range(1000):
 
