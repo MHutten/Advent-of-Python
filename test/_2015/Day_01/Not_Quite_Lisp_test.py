@@ -4,7 +4,7 @@ import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), "../../.."))
 
-from source._2015.Day_1.Not_Quite_Lisp import calculate_santas_final_destination, calculate_basement_entering_instruction_position
+from source._2015.Day_01.Not_Quite_Lisp import calculate_santas_final_destination, calculate_basement_entering_instruction_position
 
 class NotQuiteLispTestCase(TestCase):
 

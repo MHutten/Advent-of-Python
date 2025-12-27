@@ -4,7 +4,7 @@ import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), "../../.."))
 
-from source._2015.Day_6.Probably_a_Fire_Hazard import Lights, LightsWithBrightnessControls
+from source._2015.Day_06.Probably_a_Fire_Hazard import Lights, LightsWithBrightnessControls
 
 class ProbablyaFireHazardTestCase(TestCase):
 

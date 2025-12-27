@@ -4,7 +4,7 @@ import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), "../../.."))
 
-from source._2015.Day_2.I_Was_Told_There_Would_Be_No_Math import calculate_area_of_wrapping_paper, calculate_ribbon_length
+from source._2015.Day_02.I_Was_Told_There_Would_Be_No_Math import calculate_area_of_wrapping_paper, calculate_ribbon_length
 
 class IWasToldThereWouldBeNoMathTestCase(TestCase):
 

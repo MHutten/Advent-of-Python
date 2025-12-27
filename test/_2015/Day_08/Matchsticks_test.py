@@ -4,7 +4,7 @@ import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), "../../.."))
 
-from source._2015.Day_8.Matchsticks import calculate_encoded_length, calculate_memory_length
+from source._2015.Day_08.Matchsticks import calculate_encoded_length, calculate_memory_length
 
 class MatchsticksTestCase(TestCase):
 

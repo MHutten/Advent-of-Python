@@ -13,7 +13,9 @@ def main() -> None:
 
     for box in boxes:
         length, width, height = map(int, box.split('x'))
-        area_of_wrapping_paper += calculate_area_of_wrapping_paper(length, width, height)
+        area_of_present = calculate_area_of_wrapping_paper(length, width, height)
+        area_of_wrapping_paper += area_of_present
+        print("dimensions: {} length: {} width: {} height: {} area_of_present: {} area_of_wrapping_paper: {}".format(box[:-1], length, width, height, area_of_present, area_of_wrapping_paper))
 
     print(area_of_wrapping_paper)
 

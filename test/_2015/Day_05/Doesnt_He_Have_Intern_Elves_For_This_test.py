@@ -4,7 +4,7 @@ import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), "../../.."))
 
-from source._2015.Day_5.Doesnt_He_Have_Inter_Elves_For_This import is_nice, is_nice_now
+from source._2015.Day_05.Doesnt_He_Have_Inter_Elves_For_This import is_nice, is_nice_now
 
 class DoesntHeHaveInternElvesForThisTestCase(TestCase):
 

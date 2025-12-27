@@ -4,7 +4,7 @@ import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), "../../.."))
 
-from source._2015.Day_3.Perfectly_Spherical_Houses_in_a_Vacuum import calculate_number_of_visited_houses, calculate_number_of_visited_houses_with_robo_santa
+from source._2015.Day_03.Perfectly_Spherical_Houses_in_a_Vacuum import calculate_number_of_visited_houses, calculate_number_of_visited_houses_with_robo_santa
 
 class PerfectlySphericalHousesinaVacuumTestCase(TestCase):
 
