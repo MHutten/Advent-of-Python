@@ -86,13 +86,14 @@ class ProbablyaFireHazardTestCase(TestCase):
 
         self.assertEqual(lights.calculate_total_brightness(), 1)
 
-        self.assertEqual(lights[0][0], 1)
+        for i in range(1000):
 
-        for i in range(1, 1000):
+            for j in range(1000):
 
-            for j in range(1, 1000):
-
-                self.assertEqual(lights[i][j], 0)
+                if i == 0 and j == 0:
+                    self.assertEqual(lights[i][j], 1)
+                else:
+                    self.assertEqual(lights[i][j], 0)
 
     
 
