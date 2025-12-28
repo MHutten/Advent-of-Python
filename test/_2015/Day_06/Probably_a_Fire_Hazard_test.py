@@ -43,7 +43,7 @@ class ProbablyaFireHazardTestCase(TestCase):
 
             if i % 2 == 0:
 
-                self.assertFalse(lights[i][0], i)
+                self.assertFalse(lights[i][0])
 
             else:
 
